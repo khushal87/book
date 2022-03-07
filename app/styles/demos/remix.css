@@ -1,0 +1,176 @@
+/*
+ * You probably want to just delete this file; it's just for the demo pages.
+ */
+.remix-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: calc(100vh - env(safe-area-inset-bottom));
+}
+
+.remix-app > * {
+    width: 100%;
+}
+
+.remix-app__header {
+    border-bottom: 1px solid var(--color-border) 1rem;
+    padding: 2rem;
+}
+
+.remix-app__header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remix-app__header-home-link {
+    color: var(--color-links-hover);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.remix-app__header-nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.remix-app__header-nav li {
+    font-weight: bold;
+}
+
+.remix-app__header .hamburger {
+    display: none;
+}
+
+.remix-app__header .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+    .remix-app__header .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: var(--color-background);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 0px;
+    }
+
+    .remix-app__header .nav-menu.active {
+        left: 0;
+    }
+
+    .remix-app__header .nav-item {
+        margin: 1rem 0;
+    }
+
+    .remix-app__header .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .remix-app__header .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .remix-app__header .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .remix-app__header .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.remix-app__main {
+    flex: 1 1 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2rem;
+}
+
+.remix-app__footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.remix-app__footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remix__page {
+    --gap: 2rem;
+    --space: 2rem;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: var(--gap);
+    padding-top: var(--space);
+    padding-bottom: var(--space);
+}
+
+@media print, screen and (min-width: 640px) {
+    .remix__page {
+        --gap: 2rem;
+        grid-auto-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .remix__page {
+        --gap: 4rem;
+    }
+}
+
+.remix__page > main > :first-child {
+    margin-top: 0;
+}
+
+.remix__page > main > :last-child {
+    margin-bottom: 0;
+}
+
+.remix__page > aside {
+    margin: 0;
+    padding: 1.5ch 2ch;
+    border: solid 1px var(--color-border);
+    border-radius: 0.5rem;
+}
+
+.remix__page > aside > :first-child {
+    margin-top: 0;
+}
+
+.remix__page > aside > :last-child {
+    margin-bottom: 0;
+}
+
+.remix__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+}
+
+.remix__form > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,24 @@
+.blogs__heading {
+    margin-bottom: 5rem;
+}
+
+li.individual__blog {
+    list-style: none;
+    border: 1px solid #bebebe;
+    border-radius: 20px;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 10px #bebebe;
+}
+
+li.individual__blog > .heading {
+    font-size: 1.5rem;
+}
+
+li.individual__blog > .date {
+    font-size: 1rem;
+    color: gray;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 1.5rem;
+}
