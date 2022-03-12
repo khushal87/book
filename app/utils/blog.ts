@@ -24,7 +24,7 @@ export type PostMarkdownAttributes = {
     order: number;
 };
 
-const blogsPath = path.join(__dirname, "..", "app", "content", "blog");
+const blogsPath = path.join(__dirname, "..", "app", "routes", "posts");
 
 function isValidPostAttributes(
     attributes: any

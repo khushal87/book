@@ -51,7 +51,7 @@ export default function NavbarDocsCategory({
         <Link
             key={link.slug}
             className={classes.link}
-            to={"blogs" + link.slug}
+            to={"posts" + link.slug}
             onClick={onLinkClick}
             //   ref={
             //       location.pathname === link.slug

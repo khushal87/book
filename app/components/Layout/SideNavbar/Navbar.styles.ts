@@ -40,7 +40,7 @@ export default createStyles((theme: MantineTheme) => ({
         paddingRight: theme.spacing.md,
         paddingBottom: theme.spacing.xl * 2,
         paddingLeft: theme.spacing.md,
-        paddingTop: HEADER_HEIGHT + theme.spacing.md,
+        paddingTop: HEADER_HEIGHT + theme.spacing.xl,
 
         [`@media (max-width: ${NAVBAR_BREAKPOINT}px)`]: {
             paddingBottom: 120,

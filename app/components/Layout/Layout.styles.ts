@@ -41,7 +41,10 @@ export default createStyles((theme, { shouldRenderHeader }: LayoutStyles) => ({
         flex: 1,
         // aligns page top most heading with navigation and table of contents
         paddingTop: shouldRenderHeader
-            ? HEADER_HEIGHT - theme.spacing.xl - 2
+            ? HEADER_HEIGHT + theme.spacing.xl + 2
+            : 0,
+        paddingLeft: shouldRenderHeader
+            ? HEADER_HEIGHT + theme.spacing.xl + 2
             : 0,
 
         [`@media (max-width: ${NAVBAR_BREAKPOINT}px)`]: {

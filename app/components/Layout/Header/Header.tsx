@@ -41,25 +41,21 @@ export default function Header({ navbarOpened, toggleNavbar }: HeaderProps) {
                     aria-label={burgerTitle}
                 />
                 <div className={classes.logoWrapper}>
-                    <div className={classes.logo}>
-                        <Logo />
-                    </div>
-
-                    <a
-                        href="https://github.com/mantinedev/mantine/releases"
-                        className={classes.version}
+                    <div
+                        className={classes.logo}
+                        style={{ fontWeight: "bolder" }}
                     >
-                        <Code>v{corePackageJson.version}</Code>
-                    </a>
+                        Book
+                    </div>
                 </div>
                 <div />
             </div>
 
-            <Group className={classes.links} spacing="xs">
+            {/* <Group className={classes.links} spacing="xs">
                 <Discord />
                 <SourceCode />
                 <ColorSchemeToggle />
-            </Group>
+            </Group> */}
         </div>
     );
 }
